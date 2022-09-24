@@ -8,7 +8,7 @@ class Sensor(models.Model):
     address = models.TextField(blank=True)
     lat = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
     lon = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
-    iccid = models.CharField(max_length=20, blank=True)
+    iccid = models.CharField(max_length=30, blank=True)
     stock_number = models.CharField(max_length=30, blank=True)
 
 
@@ -20,7 +20,7 @@ class Report(models.Model):
     sensor_temperature = models.IntegerField(null=True)
     container_humidity = models.IntegerField(null=True)
     sensor_humidity = models.IntegerField(null=True)
-    sensor_position = models.BinaryField(null=True)
+    sensor_position = models.IntegerField(null=True)
     sensor_x = models.IntegerField(null=True)
     sensor_y = models.IntegerField(null=True)
     sensor_z = models.IntegerField(null=True)
