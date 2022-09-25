@@ -1,0 +1,8 @@
+# Run django custom command to create random reports
+# On 17:00 every day.
+
+POSTGRES_NAME = postgres
+POSTGRES_USER = postgres
+POSTGRES_PASSWORD = postgres
+
+0 17 * * * root cd /app && /usr/local/bin/python manage.py randomreports
